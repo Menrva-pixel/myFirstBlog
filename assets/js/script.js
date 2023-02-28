@@ -5,7 +5,13 @@ burgerMenu.addEventListener('click', () => {
   navbarLinks.classList.toggle('active');
 });
 
-window.addEventListener("scroll", function() {
-  var navbar = document.querySelector("nav");
-  navbar.classList.toggle("scrolled", window.scrollY > 0);
-});
+var navbarScroll = document.getElementById("navbar");
+
+window.onscroll = function() {
+  "use strict";
+  if (document.body.scrollTop >= 280 || document.documentElement.scrollTop >= 280) {
+    navbarScroll.classList.add("scroll");
+  } else {
+    navbarScroll.classList.remove("scroll");
+  }
+};
