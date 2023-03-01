@@ -9,12 +9,16 @@
 
     <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
   </head>
 
   <body>
     <!--------------------------------------header---------------------------------->
     <header>
-      <div class="parallax"></div>
+      <div class="banner">
+      <div class="banner-paralaks"></div>
+      </div>
       <div id="navbar" class="navbar">
       <nav class="navbar">
         <div class="logo">
@@ -54,13 +58,12 @@
         <div class="featured">
           <article>
             <div class="header">
-                <h3>My Blog's</h3>
-                <p style="text-align: center;">
+                <h2 style="text-align: center;">
                   Recent Activities
-                </p>
+                </h2>
             </div>
               <div class="highlight">
-                <h3 class="subtitle">Obiquitous Computing</h3>
+                <h3 class="subtitle">Ubiquitous Computing</h3>
                 <div class="gambar-artikel">
                   <img src="assets/img/featured-3.jpg" alt="dicoding">
                 </div>
@@ -77,7 +80,7 @@
               <div class="highlight">
                 <h3 class="subtitle">Cyber Crime</h3>
                 <div class="gambar-artikel">
-                  <img src="assets/img/featured-1.jpg" alt="dicoding">
+                  <img src="assets/img/featured-1.jpg" alt="Cyber Crime">
                 </div>
                     <p>Kejahatan yang sering paling sering terjadi adalah phising,
                        kejahatan ini ada upaya untuk mendapatkan informasi atau identitas pengguna seperti data pribadi, data akun sosial media,
@@ -92,7 +95,7 @@
               <div class="highlight">
                 <h3 class="subtitle">Bocoran game GTA VI</h3>
                 <div class="gambar-artikel">
-                  <img src="assets/img/featured-2.jpeg" alt="dicoding">
+                  <img src="assets/img/featured-2.jpeg" alt="Gta 6">
                 </div>
                     <p>Belakangan ini para gamer di gemparkan oleh bocoran yang tersebar di internet yang di lakukan oleh seorang hacker, game legendaris yang sedang 
                       di buat oleh Rockstar Games 1 ini memang menjadi daya tarik utama para gamers terutama parah penggemar seri game Grand Theft Auto ini.
@@ -106,16 +109,14 @@
                 <div class="clear"></div>
               </div>   
               <div class="highlight">
-                <h3 class="subtitle">Mengapa Dicoding?</h3>
+                <h3 class="subtitle">Etika Profesi</h3>
                 <div class="gambar-artikel">
-                  <img src="assets/img/dicoding-logo.webp" alt="dicoding">
+                  <img src="assets/img/featured-4.jpg" alt="etika profesi">
                 </div>
                     <p>
-                      Menurut saya Pribadi dicoding.org adalah plaform belajar terbaik
-                      khususnya di bidang IT, saya pribadi sudah sangat ingin bergabung di
-                      platform belajar dicoding semenjak 2020, namun baru kesampaian di
-                      tahun 2023 ini, karna ajakan dan beberapa refrensi dari teman
-                      kuliah, membuat saya semakin semangat sekaligus penasaran <a href="#">baca selengkapnya..</a>
+                      Dengan adanya teknologi yang semakin berkembang dimana memudahkan manusia untuk melakukan segala hal, 
+                      termasuk dalam bentuk permainan, permainan tradisional mulai di tinggalkan, namun tingkat kemalasan, 
+                      lupa waktu, hingga bolos sekolah, hingga mencuri semakin marak. Ini adalah contoh Sebagian dari teknologi yang <a href="#">baca selengkapnya..</a>
                     </p>
                     <div class="date">
                       <p>Minggu, 25 Feb 2023</p>
@@ -124,7 +125,7 @@
                 <div class="clear"></div>
               </div>
             </article>
-          </div>
+        </div>
             <!--------------------------------END OF FEATURED ARTIKEL-------------------------------->
 
             <!-------------------------SIDEBAR PROFILE CARD DAN BLOG POST---------------------------->
@@ -153,32 +154,36 @@
                   </div>
                 </div>
                     <div class="recent-post profile-card">
-                        <h3>Posts</h3>
+                        <h3>Media</h3>
                         <ul>
-                          <li>
-                            <div class="post-card">
+                          <a>click show to open youtube Playlist</a>
+                          <div class="tombol">
+                            <button class="tmbl1">Hide</button>
+                            <button class="tmbl2">Show</button>
+                          </div>
+                            <div class="post-card youtube">
                               <div class="post-image">
-                                <img src="assets/img/dicoding-logo.webp">
+                                <i class="fa-brands fa-youtube"></i>
                               </div>
+                              <iframe width="280" height="195" src="https://www.youtube.com/embed/videoseries?list=PLjqF8S3qIOnHFb31UvLiPmP4RPA1EFoLf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                               <p>Playlist Tugas Kuliah</p>
                               <div class="post-desc">
-                                <p>Mengapa Dicoding?</p>
-                                <small>Menurut saya Pribadi dicoding.org adalah plaform belajar terbaik khusus<a href="#"> more...</a></small>
+                                <small>Kumpulan video saat mengerjakan tugas praktik</small>
                               </div>
                             </div>
-                          </li>
                           <div class="post-card">
                             <div class="post-image">
-                              <img src="assets/img/dicoding-logo.webp">
+                              <img src="assets/img/featured-2.jpeg">
                             </div>
-                            <p>Mengapa Dicoding?</p>
-                            <small>Menurut saya Pribadi dicoding.org adalah<a href="#">...</a></small>
+                            <p>GTA VI Leaked!</p>
+                            <a href="#">Klik disini untuk membaca</a>
                           </div>
                         </li>
                         <div class="post-card">
                           <div class="post-image">
-                            <img src="assets/img/dicoding-logo.webp">
+                            <img src="assets/img/featured-3.jpg">
                           </div>
-                          <p>Mengapa Dicoding?</p>
+                          <p>Ubiquitous Computing</p>
                           <small>Menurut saya Pribadi dicoding.org adalah<a href="#">...</a></small>
                         </div>
                       </li>
@@ -187,19 +192,10 @@
             </aside>
             <!----------------------------------------end of sidebar--------------------------------------->
         </section>
+        <button onclick="topFunction()" id="goUp" title="Go UP"><i class="fa-solid fa-arrow-up"></i></button> 
     </main>
     
-    <script src="assets/js/script.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.js" integrity="sha512-nO7wgHUoWPYGCNriyGzcFwPSF+bPDOR+NvtOYy2wMcWkrnCNPKBcFEkU80XIN14UVja0Gdnff9EmydyLlOL7mQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script>const navbar = document.querySelector('.navbar');
-
-      window.addEventListener('scroll', () => {
-        if (window.scrollY > 0) {
-          navbar.classList.add('navbar-scrolled', 'dropdown-menu-scrolled', 'konten-drop-transform');
-        } else {
-          navbar.classList.remove('navbar-scrolled', 'dropdown-menu-scrolled', 'konten-drop-transform');
-        }
-      });</script>
+    <script src="/assets/js/main.js"></script>
     </body>
 
   <footer>
