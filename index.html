@@ -21,12 +21,12 @@
           <img src="assets/img/logonav.png" alt="Logo" />
         </div>
         <ul class="dropdown-menu">
-          <li><a href="#"><img src="assets/icon/home.png" alt="Home"></a></li>
+          <li><a href="/"><img src="assets/icon/home.png" alt="Home"></a></li>
           <li class="dropdown"><a href="#"><img src="assets/icon/page.png" alt="Pages"></a>
                       <ul class="konten-drop">
-                        <a href="/"><span>Awards</span></a>
-                        <a href="#"><span>Projects</span></a>
-                        <a href="#"><span>Article</span></a>
+                        <a href="pages/awards/"><span>Awards</span></a>
+                        <a href="pages/projects/"><span>Projects</span></a>
+                        <a href="pages/artikel/"><span>Article</span></a>
                       </ul>
                     </li>
           <li><a href="#"><img src="assets/icon/info.png" alt="About"></a></li>
@@ -38,9 +38,9 @@
     <main>
       <section id="intro">
         <div class="perkenalan">
-          <h2 id="intro-title">Introduction</h2>
+          <h2 id="intro-title">Welcome</h2>
           <p>
-            Welcome to my personal Website
+            Welcome to My Personal Blog
           </p>
         </div>
       </section>
@@ -51,7 +51,7 @@
             <div class="header">
                 <h3>My Blog's</h3>
                 <p style="text-align: center;">
-                  Website ini berisi catatan kegiatan saya selama belajar dan berkuliah.
+                  Recent Activities
                 </p>
                 <div class="highlight">
                 <h3 class="subtitle">Mengapa Dicoding?</h3>
@@ -162,9 +162,9 @@
 
       window.addEventListener('scroll', () => {
         if (window.scrollY > 0) {
-          navbar.classList.add('navbar-scrolled');
+          navbar.classList.add('navbar-scrolled', 'dropdown-menu-scrolled', 'konten-drop-transform');
         } else {
-          navbar.classList.remove('navbar-scrolled');
+          navbar.classList.remove('navbar-scrolled', 'dropdown-menu-scrolled', 'konten-drop-transform');
         }
       });</script>
     </body>
