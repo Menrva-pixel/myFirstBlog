@@ -1,29 +1,33 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto&display=swap');
 
 @font-face {
   font-family: "customFont";
   src: url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 }
 
+body,
+html {
+  height: 100%;
+}
+
 body {
   margin: 0;
   padding: 0;
-  font-family: Roboto;
+  font-family: 'Roboto', sans-serif;
 }
 
 
 
 
 /* Style untuk gambar banner */
-.banner-image {
-  position: relative;
-  margin-bottom: -5px;
-}
-
-.banner-image img {
-  width: 100%;
-  height: 760px;
-  object-fit: cover;
+.parallax {
+  background-image: url(/assets/img/banner.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 750px;
 }
 
 
@@ -35,11 +39,16 @@ body {
   right: 0;
   display: flex;
   height: 20px;
-  justify-content: space-between;
   align-items: center;
   padding: 20px;
   background-color: transparent;
   transition: background-color 0.5s ease-out;
+}
+
+/* logo navigasi */
+.logo img {
+  height: 50px;
+  width: auto;
 }
 
 .navbar-scrolled {
@@ -69,12 +78,16 @@ nav ul li ul {
   .logo {
     display: none;
   }
+
+  .dropdown-menu {
+    padding-left: 0px;
+  }
+
 }
 
 .dropdown-menu li img {
   width: 35px;
   height: auto;
-  display: block;
   -webkit-filter: drop-shadow(3px 7px 2px #222);
   filter: drop-shadow(3px 7px 2px #222);
   transition: transform .2s;
@@ -145,7 +158,7 @@ gagal-non fungsional-save for later*/
   position: relative;
 }
 
-.dropdown-menu li a  {
+.dropdown-menu li a {
   padding: 15px 15px;
   text-decoration: none;
   display: block;
@@ -159,14 +172,14 @@ gagal-non fungsional-save for later*/
   background-color: transparent;
   width: 100px;
   box-shadow: 3px 7px 2px rgba(0, 0, 0, 0.2);
-  z-index: 1;
   border: 1px solid #443C68;
-  border-radius: 7px;  
+  border-radius: 7px;
 }
 
 .konten-drop a {
   color: white;
   text-align: center;
+  margin: auto;
 }
 
 
@@ -200,18 +213,16 @@ gagal-non fungsional-save for later*/
   flex-wrap: wrap;
 }
 
-.intro-title {
-  font-family: customFont;
-}
 
 .perkenalan {
   margin: auto;
-  padding: 60px;
+  padding: 40px;
   text-align: center;
-  background-color: #18122B;
-  transition: 200ms ease-in-out;
-  color: white;
+  background-color: #443C68;
+  color: #d1d1d1;
   width: 100%;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 24px;
 }
 
 
@@ -224,30 +235,64 @@ gagal-non fungsional-save for later*/
   font-size: 22px;
 }
 
+.gambar-artikel {
+  margin: auto;
+  overflow: hidden;
+  float: left;
+  height: 100%;
+  width: auto;
+}
+
+.gambar-artikel img {
+  height: 250px;
+  width: 250px;
+}
+
 @media (max-width: 768px) {
   .highlight p {
-    margin: 1rem;
+    margin: 1.15rem;
     padding: 0;
     font-size: 16px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
   }
 
   .gambar-artikel {
-    margin-left: 34px;
+    margin: auto;
+    width: auto;
+    height: auto;
+    padding: 0 2.56rem;
   }
 }
 
 
 
 .artikel-container {
-  background-color: #443C68;
+  background-image: url(/assets/img/banner.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: opacity(20px);
+}
+
+.featured {
+  display: flex;
+  margin: auto;
+  flex-direction: column;
+  width: 1260px;
   max-width: 100%;
 }
+
+
 
 #artikel article {
   flex: 2;
   margin: auto;
-  background-color: #443C68;
-  color: white;
+  background-color: transparent;
+  color: rgb(214, 214, 214);
   max-width: 1180px;
   width: 100%;
 }
@@ -263,11 +308,13 @@ aside {
   width: 25%;
   background-color: #393053;
   text-align: center;
+  margin-left: auto;
 }
 
 @media (max-width: 768px) {
   aside {
     display: none;
+    /* hapus aside pada tampilan mobile karna tidak suka =D */
   }
 }
 
@@ -298,18 +345,23 @@ li {
 .highlight {
   width: auto;
   max-width: 100%;
-  border: 1px solid rgb(43, 43, 43);
+  border: 1px solid #635985;
   overflow: auto;
-  background-color: rgba(245, 245, 245, 0.034);
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.192);
-  border-radius: 5px;
-  margin: 0.925rem;
+  background-color: #443C68;
+  box-shadow: 2px 2px 10px rgba(2, 1, 1, 0.776);
+  border-radius: 7px 7px 7px 7px;
+  margin: 1.725rem;
 
 }
 
 .highlight p {
-  margin: 3rem;
-  overflow: auto;
+  padding-top: 28px;
+  margin: auto;
+  width: 760px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 6;
+  -webkit-box-orient: vertical;
 }
 
 a {
@@ -317,24 +369,67 @@ a {
 }
 
 .highlight img {
-  float: left;
   margin: 1.7rem;
   height: auto;
   width: 200px;
   clear: left;
 }
 
+.date {
+  color: #999;
+  font-size: 14px;
+  line-height: 18px;
+  padding: 0 0 5px;
+  display: flex;
+  gap: 29rem;
+  padding-left: 3.4rem;
+}
+
+.date p {
+  color: #e3dcf7;
+  text-transform: capitalize;
+}
+
+.date a {
+  color: #7057e0;
+  text-decoration: none;
+}
+
+.date a:hover {
+  color: #f23ad9;
+}
+
+
+
 @media screen and (max-width: 600px) {
   .articles {
     flex-direction: column;
   }
+
 }
 
 /*=========================profile============================*/
+
+.profile-card {
+  background: #443C68;
+  border: 1px solid #1c1436;
+  border-radius: 15px;
+  margin: 50px;
+}
+
 .profile {
   display: flex;
   flex-direction: column;
+}
 
+.profile-text {
+  margin: 0;
+  padding: 1px;
+}
+
+small {
+  font-weight: 400;
+  font-size: 14px;
 }
 
 .profile img {
@@ -348,6 +443,7 @@ a {
 }
 
 .social-media {
+  margin: 2rem;
   display: flex;
   justify-content: center;
 }
@@ -363,19 +459,16 @@ a {
 }
 
 .social-media i:hover {
-  color: #333;
+  color: #7057e0;
+  filter: drop-shadow(3px 5px 2px #222);
 }
 
-/* logo navigasi */
-.logo img {
-  height: 50px;
-  width: 50px;
-}
+
 
 
 /* kaki-kaki */
 .footer {
-  background-color: #302d2d;
+  background-color: #443C68;
   padding: 5px 5px;
   text-align: center;
 }
@@ -391,4 +484,95 @@ span {
 
 .footer a:hover {
   color: #635985;
+}
+
+@media (max-width: 768px) {
+
+  .footer a,
+  span {
+    font-size: 12px;
+  }
+}
+
+
+/*=============== sidebar untuk recent post =========================*/
+
+.post-card {
+  background-color: #262333;
+  border: 1px solid #7057e0;
+  box-shadow: 0 2px 5px 5px #393053;
+  margin: 2rem;
+  border-radius: 5px;
+}
+
+.post-card p {
+  font-weight: 600;
+  color: #f2f2f2;
+}
+
+.recent-post ul {
+  display: block;
+  align-items: center;
+  padding-left: 0px;
+  color: #a6a6a6;
+}
+
+.post-image img {
+  width: 55px;
+  height: 55px;
+  top: 0;
+  left: 0;
+  float: left;
+  margin: 10px;
+}
+
+.post-card small a {
+  text-decoration: none;
+  color: #f2f2f2;
+}
+
+.post-desc {
+  background-color: #262333;
+  border-radius: 5px;
+  padding: 5%;
+  left: 0;
+  top: 0;
+  right: 0
+}
+
+/*============halaman projects===================*/
+/* Style the tab */
+.catTab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+/* Style the buttons that are used to open the tab content */
+.catTab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+.catTab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.catTab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.isiTab {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
 }

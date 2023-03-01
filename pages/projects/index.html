@@ -5,8 +5,109 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    
+
+    <link rel="stylesheet" type="text/css" href="/assets/css/style.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 </head>
 <body>
-    <h1>HELLO 3</h1>
+    <header>
+        <div class="banner-image">
+          <img src="/assets/img/banner.jpg" alt="Banner Image" />
+        </div>
+        <div id="navbar" class="navbar">
+        <nav class="navbar">
+          <div class="logo">
+            <img src="/assets/img/logonav.png" alt="Logo" />
+          </div>
+          <ul class="dropdown-menu">
+            <li><a href="/index.html"><img src="/assets/icon/home.png" alt="Home"></a></li>
+            <li class="dropdown"><a><img src="/assets/icon/page.png" alt="Pages"></a>
+                        <ul class="konten-drop">
+                          <a href="/pages/awards/"><span>Awards</span></a>
+                          <a href="/pages/projects/"><span>Projects</span></a>
+                          <a href="/pages/artikel/"><span>Article</span></a>
+                        </ul>
+                      </li>
+            <li><a href="#"><img src="/assets/icon/info.png" alt="About"></a></li>
+          </ul>
+        </nav>
+      </div>
+      </header>
+      <!----------------------------------akhir dari header--------------------->
+      <main>
+        <!-------------Introduction--------------------->
+        <section id="intro">
+          <div class="perkenalan">
+            <h2 id="intro-title">Hi There!</h2>
+            <p>
+              Welcome to My Personal Blog
+            </p>
+          </div>
+        </section>
+        <!--------------akhir intro---------------------->
+
+        <!-------------------------------------konten ------------------------------>
+        <section id="category">
+            <div class="catTab">
+                <button class="tablink" onlick="openTab(event, '3D')" id="active">3D Model</button>
+                <button class="tablink" onlick="openTab(event, 'UI')">UI/UX</button>
+                <button class="tablink" onlick="openTab(event, 'WEB')">Web</button>
+            </div>
+        </section>
+
+        <div id="3D" class="isiTab">
+            <h3>hehe</h3>    
+            <p>hehehehhe</p>
+        </div>
+
+        <div id="UI" class="isiTab">
+            <h3>hehe</h3>    
+            <p>hehehehhe</p>
+        </div>
+
+        <div id="WEB" class="isiTab">
+            <h3>hehe</h3>    
+            <p>hehehehhe</p>
+        </div>
+
+
+
+        <script src="/assets/js/main.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.js" integrity="sha512-nO7wgHUoWPYGCNriyGzcFwPSF+bPDOR+NvtOYy2wMcWkrnCNPKBcFEkU80XIN14UVja0Gdnff9EmydyLlOL7mQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script>const navbar = document.querySelector('.navbar');
+    
+          window.addEventListener('scroll', () => {
+            if (window.scrollY > 0) {
+              navbar.classList.add('navbar-scrolled', 'dropdown-menu-scrolled', 'konten-drop-transform');
+            } else {
+              navbar.classList.remove('navbar-scrolled', 'dropdown-menu-scrolled', 'konten-drop-transform');
+            }
+          });</script>
+        <script>
+                function openTab(evt, projName) {
+
+            var i, isiTab, tablink;
+
+
+            isiTab = document.getElementsByClassName("isiTab");
+            for (i = 0; i < isiTab.length; i++) {
+            isiTab[i].style.display = "none";
+            }
+
+            tablink = document.getElementsByClassName("tablink");
+            for (i = 0; i < tablink.length; i++) {
+            tablink[i].className = tablink[i].className.replace(" active", "");
+            }
+
+            document.getElementById(projName).style.display = "block";
+            evt.currentTarget.className += " active";
+
+            document.getElementById("active").click();
+            } 
+        </script>
 </body>
 </html>
+
+
