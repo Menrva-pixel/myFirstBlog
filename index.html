@@ -36,15 +36,16 @@
           <img src="assets/img/logo-2.png" alt="Logo">
         </div>
         <ul class="dropdown-menu">
-          <li><a href="/"><img src="assets/icon/home.png" alt="Home"></a></li>
-            <li class="dropdown"><a><img src="assets/icon/page.png" alt="Pages"></a>
+          <li><a href="#header"><img src="assets/icon/home2.png" alt="Home"></a></li>
+            <li class="dropdown"><a><img src="assets/icon/pages.png" alt="Pages"></a>
               <ul class="konten-drop">
                 <a href="pages/awards/"><span>Awards</span></a>
                 <a href="pages/projects/"><span>Projects</span></a>
-                <a href="pages/artikel/"><span>Article</span></a>
+                <a href="#artikel"><span>Article</span></a>
               </ul>
             </li>
-          <li><a href="#"><img src="assets/icon/info.png" alt="About"></a></li>
+          <li><a href="#projects"><img src="assets/icon/projects.png" alt="About"></a></li>
+          <li><a href="#contact"><img src="assets/icon/contact.png" alt="About"></a></li>
         </ul>
       </nav>
     </div>
@@ -67,12 +68,12 @@
         <!---------------------------------FEATURED ARTIKEL--------------------------------->
         <section id="artikel">
         <div class="featured">
+          <div class="header">
+            <h2>
+              Featured Post
+            </h2>
+          </div>
           <article>
-            <div class="header">
-                <h2>
-                  Featured Post
-                </h2>
-            </div>
               <div class="highlight">
                 <h3 class="subtitle">Ubiquitous Computing</h3>
                 <div class="gambar-artikel">
@@ -136,6 +137,56 @@
                 <div class="clear"></div>
               </div>
             </article>
+            <!---------------------------section untuk project showcase-------------------------------------->
+            <div class="header">
+              <h2>
+                Projects
+              </h2>
+            </div>
+            <section id="projects" class="projects">
+              <div class="project-card">
+                <img class="project-image" src="assets/img/projects/project (1).jpg" alt="Project 1" >
+                <h3 class="project-title">3D Model</h3>
+                <p class="project-description">Panzer VI Tiger H1 Made with Blender</p>
+                <a href="#" class="project-link">View Project</a>
+              </div>
+              
+              <div class="project-card">
+                <img class="project-image" src="assets/img/projects/project (1).png" alt="Project 2">
+                <h3 class="project-title">Web App</h3>
+                <p class="project-description">e-commerce app made with CI (fullstack)</p>
+                <a href="#" class="project-link">View Project</a>
+              </div>
+              
+              <div class="project-card">
+                <img class="project-image" src="assets/img/projects/project (2).jpg" alt="Project 3">
+                <h3 class="project-title">3D Model</h3>
+                <p class="project-description">T26e1-1 Super Pershing Tank Made with Blender</p>
+                <a href="#" class="project-link">View Project</a>
+              </div>
+              
+              <div class="project-card">
+                <img class="project-image" src="assets/img/projects/project (2).png" alt="Project 4">
+                <h3 class="project-title">Web App</h3>
+                <p class="project-description">Working admin dashboard CRUD using native PHP</p>
+                <a href="#" class="project-link">View Project</a>
+              </div>
+
+              <div class="project-card">
+                <img class="project-image" src="assets/img/projects/project (3).PNG" alt="Project 4">
+                <h3 class="project-title">UI / UX</h3>
+                <p class="project-description">Garuda Indonesia APP Redesigned using FIGMA</p>
+                <a href="#" class="project-link">View Project</a>
+              </div>
+
+              <div class="project-card">
+                <img class="project-image" src="assets/img/projects/project (4).png" alt="Project 4">
+                <h3 class="project-title">Mobile UI / UX</h3>
+                <p class="project-description">android app using Flutter framework & Dart<code> .frontend</code></p>
+                <a href="#" class="project-link">View Project</a>
+              </div>
+            </section>
+            
         </div>
             <!--------------------------------END OF FEATURED ARTIKEL-------------------------------->
 
@@ -214,7 +265,7 @@
                           <div class="post-image">
                             <img src="assets/img/featured-4.jpg">
                           </div>
-                          <h4>Etika</h4>
+                          <h4>Etika Profesi</h4>
                           <div class="post-desc">
                             <a href="#">Klik disini untuk membaca..</a>
                           </div>
@@ -223,9 +274,63 @@
                     </div>
             </aside>
             <!----------------------------------------end of sidebar--------------------------------------->
-        </section>
-        <button onclick="topFunction()" id="goUp" title="Go UP"><i class="fa-solid fa-arrow-up"></i></button> 
+        <button onclick="topFunction()" id="goUp" title="GoUP"><i class="fa-solid fa-arrow-up"></i></button> 
     </main>
+
+  </section>
+  <section id="contact">
+    <div class="container">
+    
+      <div class="wrapper">
+    
+        <div class="info-container">
+          <div class="informasi-pribadi">
+          <h3>Address</h3>  
+          <ul>
+            <li><i class="fa fa-road"></i> Jakarta, Indonesia</li>
+            <li><i class="fa fa-phone"></i> (+62) 877 8060 XXXX</li>
+            <li><i class="fa fa-envelope"></i> bherdyanto26@gmail.com</li>
+          </ul>
+          </div>
+
+          <div class="mapouter">
+            <div class="gmap_canvas">
+              <iframe width="95%" height="80%" id="gmap_canvas" src="https://maps.google.com/maps?q=bekasi&t=&z=10&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
+              </iframe><a href="https://2yu.co"></a><br><style>.mapouter{position:relative;height:92.5%;width:100%;}</style>
+              <a href="https://embedgooglemap.2yu.co/"></a><style>.gmap_canvas {overflow:hidden;background:none!important;height:100%;width:100%;}</style>
+            </div>
+          </div>
+        </div>
+        <!-- End .company-info -->
+    
+        <!-- form kontak -->
+        <div class="contact"> 
+          <h4 style="color: #a6a6a6;">Leave me a message!</h4>   
+          <form id="contact-form"> 
+            <div class="input">
+              <label for="name">Nama</label>
+              <input type="text" id="name" name="name" required="">
+            </div>
+            <div class="input">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required="">
+            </div>
+            <div class="input">
+              <label for="message">Pesan</label>
+              <textarea id="message" name="message" required=""></textarea>
+            </div>
+            <div class="tombol-sub">
+              <button type="submit">Send</button>
+            </div>
+          </form>
+
+          <div class="stiker">
+            <img src="/assets/img/astro.png">
+          </div>
+        </div> 
+      </div>
+    </div>
+  </section>
     
     <script src="/assets/js/main.js"></script>
     </body>
