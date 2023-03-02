@@ -104,12 +104,5 @@ function topFunction() {
   document.documentElement.scrollTop = 0;
 }
 
-$(document).ready(function () {
-  $(".profile-text").addGlow({
-    radius: 20,
-    textColor: "#ff0",
-    haloColor: "#ffa",
-    duration: 200,
-  });
-});
+
 

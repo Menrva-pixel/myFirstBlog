@@ -41,6 +41,43 @@ body {
   min-height: 750px;
 }
 
+.banner-paralaks img {
+  filter: blur(5px);
+  width: 450px;
+  animation: bintangJatuh 15s forwards;
+  overflow: hidden;
+  position: relative;
+}
+
+.banner-paralaks span {
+  font-size: 16px;
+  font-weight: 600;
+  color: #ff5de7;
+  text-shadow: 1px 1px 1px rgba(43, 43, 43, 0.994);
+}
+
+@keyframes bintangJatuh {
+  0% {
+    transform: translate(0, 0) scale(0.5);
+  }
+
+  100% {
+    transform: translate(170%, 10%) scale(3);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  @keyframes bintangJatuh {
+    0% {
+      transform: translate(-70%, 50%) scale(0.1);
+    }
+
+    100% {
+      transform: translate(-20%, -10%) scale(1.1);
+    }
+  }
+}
+
 .banner-title {
   position: absolute;
   top: 40%;
@@ -49,12 +86,31 @@ body {
   text-align: center;
   color: rgb(238, 238, 238);
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
+  font-size: 24px;
+}
+
+.banner-title p {
+  font-size: 16px;
 }
 
 .banner-title h1 p {
   font-weight: 600;
 }
 
+.header {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 768px) {
+  .banner-title {
+    font-size: 16px;
+  }
+
+  .banner-title p {
+    font-size: 15px;
+  }
+}
 
 /* ================style untuk bar navigasi==================*/
 .navbar {
@@ -68,6 +124,7 @@ body {
   padding: 20px;
   background-color: transparent;
   transition: background-color 0.5s ease-out;
+  z-index: 1000;
 }
 
 /* logo navigasi */
@@ -142,8 +199,9 @@ nav ul li ul {
 }
 
 .dropdown-menu-scrolled li img {
-  -webkit-filter: drop-shadow(3px 0px 2px #7f5af0);
-  filter: drop-shadow(0px 5px 7px #ed63ff, 0 0px 2px #7f5af0);
+  -webkit-filter: drop-shadow(3px 0px 2px #212025) invert(100%);
+  filter: drop-shadow(0px 5px 7px #141414, 0 0px 2px #0c0a12) invert(20%);
+  ;
   transition: 0.7s;
 }
 
@@ -283,6 +341,7 @@ gagal-non fungsional-save for later*/
   padding: auto;
   text-align: justify;
   font-size: 22px;
+  font-weight: 500;
 }
 
 .gambar-artikel {
@@ -332,6 +391,7 @@ gagal-non fungsional-save for later*/
 }
 
 .featured {
+  position: relative;
   display: flex;
   margin: auto;
   flex-direction: column;
@@ -348,6 +408,7 @@ gagal-non fungsional-save for later*/
   color: rgb(214, 214, 214);
   max-width: 1180px;
   width: 100%;
+  filter: drop-shadow(0px 6px 0px rgb(0 0 0 / 0.4));
 }
 
 .clear {
@@ -431,9 +492,13 @@ li {
 }
 
 a {
-  color: #cdcad6;
+  color: #512dbd;
   text-decoration: none;
   font-weight: 600;
+}
+
+a:hover {
+  color: #6b3cf6;
 }
 
 .highlight img {
@@ -499,9 +564,23 @@ a {
   margin: 50px;
 }
 
+.featured-card {
+  background: #443C68;
+  border: 1px solid #1c1436;
+  border-radius: 15px;
+  margin: 50px;
+  height: 1280px;
+}
+
+
+
 @media (max-width: 768px) {
 
   .profile-card {
+    margin: 16.6px;
+  }
+
+  .featured-card {
     margin: 16.6px;
   }
 
@@ -512,6 +591,12 @@ a {
 
 .profile-card a {
   font-size: 14px;
+  color: #c4c1cf;
+}
+
+.featured-card a {
+  font-size: 14px;
+  color: #c4c1cf;
 }
 
 .profile {
@@ -636,14 +721,25 @@ span {
 
 
 /*=============== sidebar untuk recent post =========================*/
-
-.post-card {
+.media-player {
   background-color: #262333;
   border: 2px solid #7057e0;
   box-shadow: 0px 6px 0px #35286d;
   margin: 2rem;
   border-radius: 5px;
-  transition: transform 0.4s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, .1);
+  transition: transform .3s ease;
+}
+
+.post-card {
+  background: #393053;
+  border-radius: 6px;
+  max-height: 40px;
+  overflow: hidden;
+  padding: 0.8rem;
+  width: auto;
+  margin: 0.2rem;
+  transition: max-height 500ms ease-in-out;
 }
 
 .post-card p {
@@ -665,6 +761,8 @@ span {
   left: 0;
   float: left;
   margin: 10px;
+  object-fit: cover;
+  transition: transform .3s ease;
 }
 
 .post-card small a {
@@ -673,24 +771,37 @@ span {
 }
 
 .post-desc {
-  background-color: #262333;
-  border-radius: 5px;
+  background-color: #47464a;
+  border-radius: 1px;
   padding: 5%;
   left: 0;
   top: 0;
   right: 0;
+  margin: auto;
 }
 
 .post-card:hover {
-  transform: translateY(-20px);
+  box-shadow: 0 0 8px #d3d3d3;
+  cursor: pointer;
+  max-height: 300px;
 }
 
 .post-card:hover .post-image img {
-  transform: scale(1.1);
+  transform: scale(1.2);
 }
 
 .post-card a {
-  display: none;
+  color: #fff;
+  transition: transform .3s ease;
+}
+
+.post-card a:hover {
+  color: #939295;
+  background-color: #6b3cf6;
+}
+
+.post-card:hover a {
+  transform: translateY(0);
 }
 
 .post-card:hover+a {
@@ -738,7 +849,7 @@ span {
   bottom: 20px;
   right: 30px;
   z-index: 99;
-  border: none;
+  border: 1px solid #7057e0;
   outline: none;
   background-color: #635985;
   color: white;
@@ -746,8 +857,9 @@ span {
   padding: 15px;
   border-radius: 10px;
   font-size: 18px;
-  transition: all 0.4s;
-  animation: bounce_513 1s infinite;
+  transition: ease 0.8s;
+  -webkit-animation: bounce 1.4s infinite;
+  animation: bounce 1.4s infinite;
   width: 55px;
 }
 
@@ -755,28 +867,21 @@ span {
   background-color: #ea1f88;
 }
 
-
-.shooting-star {
-  position: absolute;
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 0 0 20px 20px;
-  border-color: transparent transparent #fff transparent;
-  animation: shooting-star 1s linear infinite;
-  transform-origin: bottom right;
-}
-
-@keyframes shooting-star {
+@-webkit-keyframes bounce {
   0% {
-    transform: rotate(0deg) scale(0);
+    bottom: 2px;
+  }
+
+  25%,
+  75% {
+    bottom: 10px;
   }
 
   50% {
-    transform: rotate(180deg) scale(1);
+    bottom: 15px;
   }
 
   100% {
-    transform: rotate(360deg) scale(0);
+    bottom: 0;
   }
 }
